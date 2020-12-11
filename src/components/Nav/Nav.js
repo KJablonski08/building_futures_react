@@ -5,7 +5,7 @@ import './nav.css';
 const Navigation = () => {
 	return (
 		<div>
-			<Navbar expand='lg' id='nav'>
+			<Navbar expand='lg' id='nav' fixed='top'>
 				<Navbar.Brand href='#home'>
 					<img src={process.env.PUBLIC_URL + '/media/bf_logo.jpg'} id='logo' />
 				</Navbar.Brand>

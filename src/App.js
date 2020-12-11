@@ -2,6 +2,7 @@ import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Nav/Nav';
 import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
@@ -16,7 +17,9 @@ function App() {
 					<Route component={NotFound} />
 				</Switch>
 			</main>
-			<footer></footer>
+			<footer>
+				<Footer />
+			</footer>
 		</div>
 	);
 }
