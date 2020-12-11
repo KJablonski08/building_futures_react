@@ -27,8 +27,8 @@ const Home = () => {
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<p>
-					<Button variant='primary' onClick={handleShow}>
+				<p id='play'>
+					<Button variant='primary' onClick={handleShow} id='play-btn'>
 						Play
 					</Button>
 				</p>

@@ -4,11 +4,15 @@
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
-	justify-content: baseline;
 }
 
 #play {
 	position: absolute;
+	bottom: 2em;
+	right: 4em;
+}
+
+#play-btn {
 	border-radius: 50%;
 	padding: 2em;
 }
