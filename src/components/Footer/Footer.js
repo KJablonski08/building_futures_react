@@ -1,9 +1,10 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import './footer.css';
 
 const Footer = () => {
 	return (
-		<div>
+		<div class='footer'>
 			<Navbar bg='dark' variant='dark' fixed='bottom'>
 				<Nav className='mr-auto'>
 					<Nav.Link href='#home'>Login</Nav.Link>

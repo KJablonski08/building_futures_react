@@ -43,8 +43,10 @@ const Blog = () => {
 								<Card.Body>
 									<Card.Title>{post.title}</Card.Title>
 									<Card.Text id='date'>{post.timestamp}</Card.Text>
-									<Card.Text>{post.body}</Card.Text>
-									<Button variant='primary'>Read More →</Button>
+									<Card.Text>{post.body.substring(0, 100)}...</Card.Text>
+									<Link to={`/posts/${post.id}`}>
+										<Button variant='primary'>Read More →</Button>
+									</Link>
 								</Card.Body>
 							</Card>
 						);
