@@ -4,7 +4,7 @@ import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
 const Footer = () => {
 	return (
 		<div>
-			<Navbar bg='dark' variant='dark'>
+			<Navbar bg='dark' variant='dark' fixed='bottom'>
 				<Nav className='mr-auto'>
 					<Nav.Link href='#home'>Login</Nav.Link>
 					<Nav.Link href='#pricing'>Contact</Nav.Link>
