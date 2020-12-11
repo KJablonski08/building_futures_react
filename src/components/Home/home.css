@@ -1,0 +1,41 @@
+#build {
+	background-image: url(./build.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 100vh;
+}
+
+#play {
+	position: absolute;
+	bottom: 2em;
+	right: 4em;
+}
+
+#play-btn {
+	border-radius: 50%;
+	padding: 2em;
+}
+
+span {
+	font-size: 1em;
+}
+
+#modal {
+	max-width: 70%;
+}
+
+@media only screen and (max-width: 600px) {
+	#modal {
+		max-width: 90%;
+	}
+}
+
+#walk-with-me {
+	background-color: #1f1a24;
+	color: white;
+}
+
+#video-container {
+	background-color: #1f1a24;
+}
