@@ -1,0 +1,23 @@
+#heading {
+	background-color: #335c67;
+	color: white;
+	display: grid;
+	justify-content: center;
+}
+
+#post-container {
+	margin: 5% 10%;
+}
+
+#post-card {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.3s;
+}
+
+#card:hover {
+	box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+#date {
+	color: #9e2a2b;
+}
