@@ -1,0 +1,20 @@
+#meerkat {
+	background-image: url('./meerkat.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 90vh;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+/* Photo by: Pierre-Yves Miguet on Unsplash */
+
+#meerkat-cred {
+	color: grey;
+	text-decoration: none;
+}
+
+#notFound {
+	color: white;
+}
