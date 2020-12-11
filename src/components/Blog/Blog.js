@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './blog.css';
 
 const Blog = () => {
-	let [posts, setPosts] = useState(null);
+	let [posts, setPosts] = useState([]);
 	useEffect(() => {
 		fetch('http://localhost:8000/posts/')
 			.then((res) => res.json())
@@ -14,21 +14,6 @@ const Blog = () => {
 			.catch(console.error);
 	}, []);
 	console.log(posts);
-	if (!posts) {
-		return (
-			<div className='margin'>
-				<Spinner animation='border' variant='primary' />
-				<h6>Loading... Please Wait</h6>
-				<p>
-					If books do not load in a few seconds - please navigate back to home
-					and try your search again
-				</p>
-				<Link to={'/'}>
-					<Button>Home</Button>
-				</Link>
-			</div>
-		);
-	}
 	return (
 		<div>
 			<Jumbotron id='heading'>
