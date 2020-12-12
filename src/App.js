@@ -10,7 +10,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
-	const [token, setToken] = useState(null);
+	const [token, setToken] = useState('');
 	return (
 		<div className='App'>
 			<header>
@@ -34,7 +34,7 @@ function App() {
 				</Switch>
 			</main>
 			<footer>
-				<Footer />
+				<Footer token={token} setToken={setToken} />
 			</footer>
 		</div>
 	);

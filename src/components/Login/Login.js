@@ -17,11 +17,6 @@ const Login = ({ token, setToken }) => {
 		})
 			.then((res) => {
 				setToken(res.data.auth_token);
-				if (res.data.auth_token) {
-					window.location.href = '/';
-				} else {
-					console.log(res.data);
-				}
 			})
 			.catch(console.error);
 	};
@@ -31,7 +26,6 @@ const Login = ({ token, setToken }) => {
 	};
 	return (
 		<div className='login-form'>
-			<p>Hello from inside the Login form</p>
 			<Form onSubmit={handleSubmit}>
 				<Form.Group controlId='formBasicEmail'>
 					<Form.Label>Email address</Form.Label>
@@ -46,7 +40,6 @@ const Login = ({ token, setToken }) => {
 						We'll never share your email with anyone else.
 					</Form.Text>
 				</Form.Group>
-
 				<Form.Group controlId='formBasicPassword'>
 					<Form.Label>Password</Form.Label>
 					<Form.Control
@@ -56,9 +49,6 @@ const Login = ({ token, setToken }) => {
 						onChange={handleChange}
 						value={user.password}
 					/>
-				</Form.Group>
-				<Form.Group controlId='formBasicCheckbox'>
-					<Form.Check type='checkbox' label='Check me out' />
 				</Form.Group>
 				<Button variant='primary' type='submit'>
 					Submit
