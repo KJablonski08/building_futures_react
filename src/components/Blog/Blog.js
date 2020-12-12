@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './blog.css';
 
 const Blog = () => {
 	let [posts, setPosts] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:8000/posts/')
-			.then((res) => res.json())
+		axios
+			.get('http://localhost:8000/posts/')
 			.then((res) => {
-				setPosts(res);
+				setPosts(res.data);
 			})
 			.catch(console.error);
 	}, []);
+	console.log(posts);
 	return (
 		<div>
 			<Jumbotron id='heading'>

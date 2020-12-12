@@ -1,14 +1,17 @@
 import React from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = () => {
 	return (
-		<div class='footer'>
+		<div className='footer'>
 			<Navbar bg='dark' variant='dark' fixed='bottom'>
 				<Nav className='mr-auto'>
-					<Nav.Link href='#home'>Login</Nav.Link>
-					<Nav.Link href='#pricing'>Contact</Nav.Link>
+					<Nav.Link>
+						<Link to='/login'>Login</Link>
+					</Nav.Link>
+					<Nav.Link>Contact</Nav.Link>
 				</Nav>
 				<p>Follow Us</p>
 				<Nav.Link href='#home'>Facebook</Nav.Link>

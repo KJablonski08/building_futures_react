@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './postdetail.css';
 
 const PostDetail = ({ match }) => {
 	const [post, setPost] = useState({});
 	useEffect(() => {
-		fetch(`http://localhost:8000/posts/${match.params.post}`)
-			.then((res) => res.json())
+		axios
+			.get(`http://localhost:8000/posts/${match.params.post}`)
 			.then((res) => {
-				setPost(res);
+				setPost(res.data);
 			})
 			.catch(console.error);
 	}, []);
-
 	return (
 		<div className='detail'>
 			<header>
