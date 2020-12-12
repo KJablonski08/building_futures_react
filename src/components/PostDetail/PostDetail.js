@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Spinner, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './postdetail.css';
 
@@ -30,6 +30,9 @@ const PostDetail = ({ match }) => {
 			<main>
 				<p>{post.body}</p>
 			</main>
+			<Link to='/posts'>
+				<Button>Back to blog Homepage</Button>
+			</Link>
 		</div>
 	);
 };

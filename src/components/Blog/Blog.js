@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardColumns, Button, Spinner, Jumbotron } from 'react-bootstrap';
+import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './blog.css';
 
@@ -13,11 +13,12 @@ const Blog = () => {
 			})
 			.catch(console.error);
 	}, []);
-	console.log(posts);
 	return (
 		<div>
 			<Jumbotron id='heading'>
 				<h1>Blog Posts</h1>
+				<br />
+				<Button variant='outline-light'>New</Button>
 			</Jumbotron>
 			<div id='post-container'>
 				<CardColumns>

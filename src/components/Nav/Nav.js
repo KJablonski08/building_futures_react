@@ -23,7 +23,8 @@ const Navigation = () => {
 							<Link to='#'>About Us</Link>
 						</Nav.Link>
 						<Nav.Link>
-							<Link to='/posts'>Blog</Link>
+							<Link to='/posts' class="nav-link'
+							]\">Blog</Link>
 						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
