@@ -1,38 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { Card, CardColumns, Button, Spinner, Jumbotron } from 'react-bootstrap';
+import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './blog.css';
 
 const Blog = () => {
-	let [posts, setPosts] = useState(null);
+	let [posts, setPosts] = useState([]);
 	useEffect(() => {
-		fetch('http://localhost:8000/posts/')
-			.then((res) => res.json())
+		axios
+			.get('http://localhost:8000/posts/')
 			.then((res) => {
-				setPosts(res);
+				setPosts(res.data);
 			})
 			.catch(console.error);
 	}, []);
 	console.log(posts);
-	if (!posts) {
-		return (
-			<div className='margin'>
-				<Spinner animation='border' variant='primary' />
-				<h6>Loading... Please Wait</h6>
-				<p>
-					If books do not load in a few seconds - please navigate back to home
-					and try your search again
-				</p>
-				<Link to={'/'}>
-					<Button>Home</Button>
-				</Link>
-			</div>
-		);
-	}
 	return (
 		<div>
 			<Jumbotron id='heading'>
 				<h1>Blog Posts</h1>
+				<br />
+				<Button variant='outline-light'>New</Button>
 			</Jumbotron>
 			<div id='post-container'>
 				<CardColumns>

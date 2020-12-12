@@ -4,6 +4,7 @@ import Navigation from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import Blog from './components/Blog/Blog';
 import PostDetail from './components/PostDetail/PostDetail';
+import Login from './components/Login/Login';
 import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 
@@ -23,6 +24,7 @@ function App() {
 							return <PostDetail match={routerProps.match} />;
 						}}
 					/>
+					<Route path='/login' component={Login} />
 					<Route component={NotFound} />
 				</Switch>
 			</main>

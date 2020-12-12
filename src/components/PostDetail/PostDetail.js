@@ -1,52 +1,40 @@
 import React, { useState, useEffect } from 'react';
-import { Spinner, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 import './postdetail.css';
 
 const PostDetail = ({ match }) => {
-	const [post, setPost] = useState(null);
+	const [post, setPost] = useState({});
 	useEffect(() => {
-		fetch(`http://localhost:8000/posts/${match.params.post}`)
-			.then((res) => res.json())
+		axios
+			.get(`http://localhost:8000/posts/${match.params.post}`)
 			.then((res) => {
-				setPost(res);
+				setPost(res.data);
 			})
 			.catch(console.error);
 	}, []);
-	if (!post) {
-		return (
-			<div className='margin'>
-				<Spinner animation='border' variant='primary' />
-				<h6>Loading... Please Wait</h6>
-				<p>
-					If books do not load in a few seconds - please navigate back to home
-					and try your search again
-				</p>
-				<Link to={'/'}>
-					<Button>Home</Button>
-				</Link>
-			</div>
-		);
-	} else {
-		return (
-			<div className='detail'>
-				<header>
-					<img
-						src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Welcome_files/DSC_0244.jpg'
-						alt='post'
-						className='post-photo'
-					/>
-					<br />
-					<br />
-					<h2>{post.title}</h2>
-					<h6>{post.timestamp}</h6>
-				</header>
-				<main>
-					<p>{post.body}</p>
-				</main>
-			</div>
-		);
-	}
+	return (
+		<div className='detail'>
+			<header>
+				<img
+					src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Welcome_files/DSC_0244.jpg'
+					alt='post'
+					className='post-photo'
+				/>
+				<br />
+				<br />
+				<h2>{post.title}</h2>
+				<h6>{post.timestamp}</h6>
+			</header>
+			<main>
+				<p>{post.body}</p>
+			</main>
+			<Link to='/posts'>
+				<Button>Back to blog Homepage</Button>
+			</Link>
+		</div>
+	);
 };
 
 export default PostDetail;
