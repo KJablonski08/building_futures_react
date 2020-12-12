@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Nav/Nav';
@@ -9,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import NotFound from './components/NotFound/NotFound';
 
 function App() {
+	const [token, setToken] = useState('');
 	return (
 		<div className='App'>
 			<header>
@@ -24,12 +26,15 @@ function App() {
 							return <PostDetail match={routerProps.match} />;
 						}}
 					/>
-					<Route path='/login' component={Login} />
+					<Route
+						path='/login'
+						render={() => <Login token={token} setToken={setToken} />}
+					/>
 					<Route component={NotFound} />
 				</Switch>
 			</main>
 			<footer>
-				<Footer />
+				<Footer token={token} setToken={setToken} />
 			</footer>
 		</div>
 	);
