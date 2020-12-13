@@ -71,10 +71,11 @@ const Login = ({ token, setToken }) => {
 				</Button>
 				<br />
 			</Form>
-			<h1>LOGIN WITH FACEBOOK AND GOOGLE</h1>
+
+			<hr />
 
 			<FacebookLogin
-				appId='<FACEBOOK APP ID>'
+				appId='2878210639070393'
 				fields='name,email,picture'
 				callback={responseFacebook}
 			/>
@@ -82,7 +83,7 @@ const Login = ({ token, setToken }) => {
 			<br />
 
 			<GoogleLogin
-				clientId='<GOOGLE CLIENT ID>'
+				clientId='859307977908-gplopdge0auvv0ve7jbmokogrb5bults.apps.googleusercontent.com'
 				buttonText='LOGIN WITH GOOGLE'
 				onSuccess={responseGoogle}
 				onFailure={responseGoogle}
