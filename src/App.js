@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Nav/Nav';
@@ -11,6 +11,11 @@ import NotFound from './components/NotFound/NotFound';
 
 function App() {
 	const [token, setToken] = useState('');
+	const [loggedIn, setLoggedIn] = useState(false);
+	useEffect(() => {
+		token !== '' ? setLoggedIn(true) : setLoggedIn(false);
+	}, [token]);
+	console.log(loggedIn);
 	return (
 		<div className='App'>
 			<header>
@@ -19,7 +24,13 @@ function App() {
 			<main>
 				<Switch>
 					<Route exact path='/' component={Home} />
-					<Route exact path='/posts' component={Blog} />
+					<Route
+						exact
+						path='/posts'
+						render={() => {
+							return <Blog token={token} />;
+						}}
+					/>
 					<Route
 						path='/posts/:post'
 						render={(routerProps) => {

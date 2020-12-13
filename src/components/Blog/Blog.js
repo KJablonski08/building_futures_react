@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './blog.css';
 
-const Blog = () => {
+const Blog = ({ token }) => {
 	let [posts, setPosts] = useState([]);
 	useEffect(() => {
 		axios
@@ -20,7 +20,7 @@ const Blog = () => {
 			<Jumbotron id='heading'>
 				<h1>Blog Posts</h1>
 				<br />
-				<Button variant='outline-light'>New</Button>
+				{token !== '' ? <Button variant='outline-light'>New</Button> : ''}
 			</Jumbotron>
 			<div id='post-container'>
 				<CardColumns>

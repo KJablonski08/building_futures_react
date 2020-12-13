@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import FacebookLogin from 'react-facebook-login';
+import GoogleLogin from 'react-google-login';
+import fbLogin from './services/fbLogin';
+import googleLogin from './services/googleLogin';
 import axios from 'axios';
 import './login.css';
 
@@ -24,6 +28,18 @@ const Login = ({ token, setToken }) => {
 		event.preventDefault();
 		setUser({ ...user, [event.target.name]: event.target.value });
 	};
+	const responseFacebook = async (response) => {
+		let fbResponse = await fbLogin(response.accessToken);
+		console.log(fbResponse);
+		console.log(response);
+	};
+
+	const responseGoogle = async (response) => {
+		let googleResponse = await googleLogin(response.accessToken);
+		console.log(googleResponse);
+		console.log(response);
+	};
+
 	return (
 		<div className='login-form'>
 			<Form onSubmit={handleSubmit}>
@@ -53,7 +69,24 @@ const Login = ({ token, setToken }) => {
 				<Button variant='primary' type='submit'>
 					Submit
 				</Button>
+				<br />
 			</Form>
+			<h1>LOGIN WITH FACEBOOK AND GOOGLE</h1>
+
+			<FacebookLogin
+				appId='<FACEBOOK APP ID>'
+				fields='name,email,picture'
+				callback={responseFacebook}
+			/>
+			<br />
+			<br />
+
+			<GoogleLogin
+				clientId='<GOOGLE CLIENT ID>'
+				buttonText='LOGIN WITH GOOGLE'
+				onSuccess={responseGoogle}
+				onFailure={responseGoogle}
+			/>
 		</div>
 	);
 };
