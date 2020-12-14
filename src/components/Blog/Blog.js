@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './blog.css';
 
-const Blog = () => {
+const Blog = ({ loggedIn }) => {
 	let [posts, setPosts] = useState([]);
 	useEffect(() => {
 		axios
@@ -14,13 +14,16 @@ const Blog = () => {
 			})
 			.catch(console.error);
 	}, []);
-	console.log(posts);
 	return (
 		<div>
 			<Jumbotron id='heading'>
 				<h1>Blog Posts</h1>
 				<br />
-				<Button variant='outline-light'>New</Button>
+				{loggedIn && (
+					<Link to='posts/new'>
+						<Button>New</Button>
+					</Link>
+				)}
 			</Jumbotron>
 			<div id='post-container'>
 				<CardColumns>
