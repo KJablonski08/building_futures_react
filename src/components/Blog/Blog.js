@@ -33,6 +33,8 @@ const Blog = ({ loggedIn }) => {
 								<Card.Header>{post.title}</Card.Header>
 								<Card.Body>
 									<Card.Title>{post.title}</Card.Title>
+									<Card.Text>{post.id}</Card.Text>
+									<Card.Text>{post.author}</Card.Text>
 									<Card.Text id='date'>{post.timestamp}</Card.Text>
 									<Card.Text>{post.body.substring(0, 100)}...</Card.Text>
 									<Link to={`/posts/${post.id}`}>

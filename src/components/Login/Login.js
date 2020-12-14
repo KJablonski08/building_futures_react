@@ -3,8 +3,9 @@ import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './login.css';
 
-const Login = ({ token, setToken }) => {
+const Login = ({ setToken, setUserData }) => {
 	const [user, setUser] = useState({
+		username: '',
 		email: '',
 		password: '',
 	});
@@ -12,11 +13,13 @@ const Login = ({ token, setToken }) => {
 		event.preventDefault();
 		axios({
 			method: 'POST',
-			url: 'http://localhost:8000/token/login',
+			url: 'http://localhost:8000/api-token-auth/',
 			data: user,
 		})
 			.then((res) => {
-				setToken(res.data.auth_token);
+				console.log(res.data);
+				setToken(res.data.token);
+				setUserData({});
 			})
 			.catch(console.error);
 	};
@@ -27,7 +30,15 @@ const Login = ({ token, setToken }) => {
 	return (
 		<div className='login-form'>
 			<Form onSubmit={handleSubmit}>
-				<Form.Group controlId='formBasicEmail'>
+				<Form.Group>
+					<Form.Label>Username (email address)</Form.Label>
+					<Form.Control
+						type='username'
+						name='username'
+						placeholder='Enter username'
+						onChange={handleChange}
+						value={user.username}
+					/>
 					<Form.Label>Email address</Form.Label>
 					<Form.Control
 						type='email'

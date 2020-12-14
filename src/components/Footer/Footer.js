@@ -5,9 +5,8 @@ import './footer.css';
 
 const Footer = ({ token, setToken }) => {
 	const logout = () => {
-		setToken = null;
+		setToken = '';
 	};
-	console.log(token);
 	return (
 		<div className='footer'>
 			<Navbar bg='dark' variant='dark' fixed='bottom'>

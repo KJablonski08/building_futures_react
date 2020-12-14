@@ -12,6 +12,11 @@ import NotFound from './components/NotFound/NotFound';
 
 function App() {
 	const [token, setToken] = useState('');
+	const [userData, setUserData] = useState({
+		user_id: '',
+		email: '',
+		name: '',
+	});
 	const [loggedIn, setLoggedIn] = useState(false);
 	useEffect(() => {
 		if (token === '' || token === null || token === undefined) {
@@ -38,7 +43,13 @@ function App() {
 					/>
 					<Route
 						path='/login'
-						render={() => <Login token={token} setToken={setToken} />}
+						render={() => (
+							<Login
+								token={token}
+								setToken={setToken}
+								setUserData={setUserData}
+							/>
+						)}
 					/>
 					<Route
 						path='/posts/new'
