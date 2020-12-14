@@ -60,7 +60,13 @@ function App() {
 					<Route
 						path='/posts/:post'
 						render={(routerProps) => {
-							return <PostDetail match={routerProps.match} />;
+							return (
+								<PostDetail
+									match={routerProps.match}
+									userData={userData}
+									token={token}
+								/>
+							);
 						}}
 					/>
 					<Route component={NotFound} />

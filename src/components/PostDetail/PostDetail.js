@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './postdetail.css';
 
-const PostDetail = ({ match }) => {
+const PostDetail = ({ match, userData, token }) => {
 	const [post, setPost] = useState({});
 	useEffect(() => {
 		axios
@@ -14,6 +14,16 @@ const PostDetail = ({ match }) => {
 			})
 			.catch(console.error);
 	}, []);
+	const handleDelete = (event) => {
+		event.preventDefault();
+		axios({
+			method: 'DELETE',
+			url: `http://localhost:8000/posts/${match.params.post}`,
+			headers: {
+				Authorization: `token ${token}`,
+			},
+		});
+	};
 	return (
 		<div className='detail'>
 			<header>
@@ -29,6 +39,11 @@ const PostDetail = ({ match }) => {
 			</header>
 			<main>
 				<p>{post.body}</p>
+				{post.author === userData.user_id && (
+					<Button variant='danger' onClick={handleDelete}>
+						Delete
+					</Button>
+				)}
 			</main>
 			<Link to='/posts'>
 				<Button>Back to blog Homepage</Button>
