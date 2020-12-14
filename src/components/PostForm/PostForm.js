@@ -3,9 +3,9 @@ import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './postform.css';
 
-const PostForm = ({ token }) => {
+const PostForm = ({ token, userData }) => {
 	const [post, setPost] = useState({
-		author: '',
+		author: userData.user_id,
 		title: '',
 		body: '',
 	});
@@ -24,6 +24,7 @@ const PostForm = ({ token }) => {
 			},
 		});
 	};
+	console.log(token);
 	return (
 		<div className='form'>
 			<h2>Add A New Post</h2>
@@ -49,14 +50,6 @@ const PostForm = ({ token }) => {
 							placeholder='Create your post here ...'
 						/>
 					</Form.Group>
-					<Form.Label htmlFor='author'>Author</Form.Label>
-					<Form.Control
-						type='author'
-						name='author'
-						onChange={handleChange}
-						value={post.author}
-						placeholder='Author foreign key'
-					/>
 				</Form.Group>
 
 				<Button className='buttons' variant='primary' type='submit'>

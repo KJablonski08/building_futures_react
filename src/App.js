@@ -54,7 +54,7 @@ function App() {
 					<Route
 						path='/posts/new'
 						render={() => {
-							return <PostForm token={token} />;
+							return <PostForm token={token} userData={userData} />;
 						}}
 					/>
 					<Route
