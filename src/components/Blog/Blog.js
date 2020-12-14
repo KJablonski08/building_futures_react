@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './blog.css';
 
-const Blog = () => {
+const Blog = ({ loggedIn }) => {
 	let [posts, setPosts] = useState([]);
 	useEffect(() => {
 		axios
@@ -14,13 +14,16 @@ const Blog = () => {
 			})
 			.catch(console.error);
 	}, []);
-	console.log(posts);
 	return (
 		<div>
 			<Jumbotron id='heading'>
 				<h1>Blog Posts</h1>
 				<br />
-				<Button variant='outline-light'>New</Button>
+				{loggedIn && (
+					<Link to='posts/new'>
+						<Button>New</Button>
+					</Link>
+				)}
 			</Jumbotron>
 			<div id='post-container'>
 				<CardColumns>
@@ -30,6 +33,8 @@ const Blog = () => {
 								<Card.Header>{post.title}</Card.Header>
 								<Card.Body>
 									<Card.Title>{post.title}</Card.Title>
+									<Card.Text>{post.id}</Card.Text>
+									<Card.Text>{post.author}</Card.Text>
 									<Card.Text id='date'>{post.timestamp}</Card.Text>
 									<Card.Text>{post.body.substring(0, 100)}...</Card.Text>
 									<Link to={`/posts/${post.id}`}>
