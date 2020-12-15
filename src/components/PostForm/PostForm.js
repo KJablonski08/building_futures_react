@@ -3,11 +3,13 @@ import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './postform.css';
 
-const PostForm = ({ token, userData }) => {
+const PostForm = ({ token, userData, editPost }) => {
+	let title = editPost ? editPost.title : '';
+	let body = editPost ? editPost.body : '';
 	const [post, setPost] = useState({
 		author: userData.user_id,
-		title: '',
-		body: '',
+		title: title,
+		body: body,
 	});
 	const handleChange = (event) => {
 		event.preventDefault();
@@ -24,11 +26,24 @@ const PostForm = ({ token, userData }) => {
 			},
 		});
 	};
+	const handleEdit = (event) => {
+		event.preventDefault();
+		axios({
+			method: 'PUT',
+			url: `http://localhost:8000/posts/${editPost.id}/`,
+			data: post,
+			headers: {
+				Authorization: `token ${token}`,
+			},
+		});
+	};
 	console.log(token);
 	return (
 		<div className='form'>
 			<h2>Add A New Post</h2>
-			<Form onSubmit={handleSubmit} className='formContainer'>
+			<Form
+				onSubmit={editPost ? handleEdit : handleSubmit}
+				className='formContainer'>
 				<Form.Group>
 					<Form.Label htmlFor='title'>Title</Form.Label>
 					<Form.Control

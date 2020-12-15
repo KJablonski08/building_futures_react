@@ -1,11 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from 'react-bootstrap';
+import { Button, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import PostForm from '../PostForm/PostForm';
 import axios from 'axios';
 import './postdetail.css';
 
 const PostDetail = ({ match, userData, token }) => {
 	const [post, setPost] = useState({});
+	const [showModal, setShowModal] = useState(false);
+	const handleClose = () => setShowModal(false);
+	const handleShow = () => setShowModal(true);
 	useEffect(() => {
 		axios
 			.get(`http://localhost:8000/posts/${match.params.post}`)
@@ -26,6 +30,18 @@ const PostDetail = ({ match, userData, token }) => {
 	};
 	return (
 		<div className='detail'>
+			{showModal && (
+				<Modal
+					show={handleShow}
+					onHide={handleClose}
+					backdrop='static'
+					keyboard={false}>
+					<div className='modal-form'>
+						<h2>Edit this Post:</h2>
+						<PostForm token={token} userData={userData} editPost={post} />
+					</div>
+				</Modal>
+			)}
 			<header>
 				<img
 					src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Welcome_files/DSC_0244.jpg'
@@ -40,8 +56,13 @@ const PostDetail = ({ match, userData, token }) => {
 			<main>
 				<p>{post.body}</p>
 				{post.author === userData.user_id && (
-					<Button variant='danger' onClick={handleDelete}>
+					<Button variant='outline-danger' onClick={handleDelete}>
 						Delete
+					</Button>
+				)}
+				{post.author === userData.user_id && (
+					<Button variant='outline-warning' onClick={handleShow}>
+						Edit
 					</Button>
 				)}
 			</main>
