@@ -40,7 +40,7 @@ const Home = () => {
 					change the world. Indeed, it is the only thing that ever has
 				</h4>
 				<p id='quote_citation'>-Margaret Mead</p>
-				<Link to='/about'>
+				<Link to='about'>
 					<Button variant='outline-dark'>About Us</Button>
 				</Link>
 			</Jumbotron>
