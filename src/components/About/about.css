@@ -1,0 +1,8 @@
+#about {
+	margin: 0;
+}
+
+h5 {
+	display: grid;
+	justify-content: end;
+}

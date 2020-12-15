@@ -9,7 +9,7 @@ const Footer = ({ token, setToken }) => {
 	};
 	return (
 		<div className='footer'>
-			<Navbar bg='dark' variant='dark' fixed='bottom'>
+			<Navbar bg='dark' variant='dark'>
 				<Nav className='mr-auto'>
 					<Nav.Link>
 						<Link to='/login'>Login</Link>
