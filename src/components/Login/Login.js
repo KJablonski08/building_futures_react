@@ -19,7 +19,11 @@ const Login = ({ setToken, setUserData }) => {
 			.then((res) => {
 				console.log(res.data);
 				setToken(res.data.token);
-				setUserData({});
+				setUserData({
+					user_id: res.data.user_id,
+					email: res.data.email,
+					name: res.data.name,
+				});
 			})
 			.catch(console.error);
 	};

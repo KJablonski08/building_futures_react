@@ -3,11 +3,13 @@ import { Form, Button } from 'react-bootstrap';
 import axios from 'axios';
 import './postform.css';
 
-const PostForm = ({ token }) => {
+const PostForm = ({ token, userData, editPost }) => {
+	let title = editPost ? editPost.title : '';
+	let body = editPost ? editPost.body : '';
 	const [post, setPost] = useState({
-		author: '',
-		title: '',
-		body: '',
+		author: userData.user_id,
+		title: title,
+		body: body,
 	});
 	const handleChange = (event) => {
 		event.preventDefault();
@@ -24,10 +26,24 @@ const PostForm = ({ token }) => {
 			},
 		});
 	};
+	const handleEdit = (event) => {
+		event.preventDefault();
+		axios({
+			method: 'PUT',
+			url: `http://localhost:8000/posts/${editPost.id}/`,
+			data: post,
+			headers: {
+				Authorization: `token ${token}`,
+			},
+		});
+	};
+	console.log(token);
 	return (
 		<div className='form'>
 			<h2>Add A New Post</h2>
-			<Form onSubmit={handleSubmit} className='formContainer'>
+			<Form
+				onSubmit={editPost ? handleEdit : handleSubmit}
+				className='formContainer'>
 				<Form.Group>
 					<Form.Label htmlFor='title'>Title</Form.Label>
 					<Form.Control
@@ -49,14 +65,6 @@ const PostForm = ({ token }) => {
 							placeholder='Create your post here ...'
 						/>
 					</Form.Group>
-					<Form.Label htmlFor='author'>Author</Form.Label>
-					<Form.Control
-						type='author'
-						name='author'
-						onChange={handleChange}
-						value={post.author}
-						placeholder='Author foreign key'
-					/>
 				</Form.Group>
 
 				<Button className='buttons' variant='primary' type='submit'>

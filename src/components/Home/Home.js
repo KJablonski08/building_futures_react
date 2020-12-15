@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Jumbotron, Modal } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './home.css';
 
 const Home = () => {
@@ -32,6 +33,16 @@ const Home = () => {
 						Play
 					</Button>
 				</p>
+			</Jumbotron>
+			<Jumbotron id='about'>
+				<h4 id='quote'>
+					Never doubt that a small group of thoughtful committed citizens can
+					change the world. Indeed, it is the only thing that ever has
+				</h4>
+				<p id='quote_citation'>-Margaret Mead</p>
+				<Link to='/about'>
+					<Button variant='outline-dark'>About Us</Button>
+				</Link>
 			</Jumbotron>
 		</div>
 	);

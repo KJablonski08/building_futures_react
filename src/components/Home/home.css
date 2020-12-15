@@ -4,6 +4,8 @@
 	background-position: center;
 	background-size: cover;
 	height: 100vh;
+	margin: 0;
+	border-radius: 0;
 }
 
 #play {
@@ -38,4 +40,21 @@ span {
 
 #video-container {
 	background-color: #1f1a24;
+}
+
+#about {
+	margin: 0;
+	border-radius: 0;
+	display: grid;
+	background-color: #f2e9e4;
+}
+
+#quote {
+	display: grid;
+	justify-content: center;
+}
+
+#quote_citation {
+	display: grid;
+	justify-content: end;
 }
