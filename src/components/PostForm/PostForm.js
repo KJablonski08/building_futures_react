@@ -19,7 +19,7 @@ const PostForm = ({ token, userData, editPost }) => {
 		event.preventDefault();
 		axios({
 			method: 'POST',
-			url: 'http://localhost:8000/posts/',
+			url: 'https://building-futures-django.herokuapp.com/posts/',
 			data: post,
 			headers: {
 				Authorization: `token ${token}`,
@@ -30,7 +30,7 @@ const PostForm = ({ token, userData, editPost }) => {
 		event.preventDefault();
 		axios({
 			method: 'PUT',
-			url: `http://localhost:8000/posts/${editPost.id}/`,
+			url: `https://building-futures-django.herokuapp.com/posts/${editPost.id}/`,
 			data: post,
 			headers: {
 				Authorization: `token ${token}`,

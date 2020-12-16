@@ -12,7 +12,9 @@ const PostDetail = ({ match, userData, token }) => {
 	const handleShow = () => setShowModal(true);
 	useEffect(() => {
 		axios
-			.get(`http://localhost:8000/posts/${match.params.post}`)
+			.get(
+				`https://building-futures-django.herokuapp.com/posts/${match.params.post}`
+			)
 			.then((res) => {
 				setPost(res.data);
 			})
@@ -22,7 +24,7 @@ const PostDetail = ({ match, userData, token }) => {
 		event.preventDefault();
 		axios({
 			method: 'DELETE',
-			url: `http://localhost:8000/posts/${match.params.post}`,
+			url: `https://building-futures-django.herokuapp.com/posts/${match.params.post}`,
 			headers: {
 				Authorization: `token ${token}`,
 			},

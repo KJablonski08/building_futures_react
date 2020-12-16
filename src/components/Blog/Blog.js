@@ -8,7 +8,7 @@ const Blog = ({ loggedIn }) => {
 	let [posts, setPosts] = useState([]);
 	useEffect(() => {
 		axios
-			.get('http://localhost:8000/posts/')
+			.get('https://building-futures-django.herokuapp.com/posts/')
 			.then((res) => {
 				setPosts(res.data);
 			})
