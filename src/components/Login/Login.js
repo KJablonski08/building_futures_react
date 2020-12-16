@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import GoogleSocialAuth from './GoogleSocialAuth';
 import axios from 'axios';
 import './login.css';
 
@@ -69,6 +70,7 @@ const Login = ({ setToken, setUserData }) => {
 					Submit
 				</Button>
 			</Form>
+			<GoogleSocialAuth />
 		</div>
 	);
 };
