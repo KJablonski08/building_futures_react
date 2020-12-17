@@ -45,7 +45,7 @@ const PostDetail = ({ match, userData, token }) => {
 					</div>
 				</Modal>
 			)}
-			<Card id='post-card'>
+			<Card>
 				<Card.Img
 					variant='top'
 					src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Trip_Photos/Pages/February,_2006_files/Media/DSC_0004/DSC_0004.jpg?disposition=download'
