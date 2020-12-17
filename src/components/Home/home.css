@@ -60,9 +60,8 @@ span {
 }
 
 @media only screen and (max-width: 600px) {
-	.about,
-	.contact {
-		margin: 0;
+	.about {
+		margin: auto;
 	}
 }
 
@@ -79,15 +78,25 @@ span {
 #quote_citation {
 	display: grid;
 	justify-content: end;
-	margin: 0 10em;
+}
+
+@media only screen and (max-width: 600px) {
+	#quote_citation {
+		margin: 0;
+	}
 }
 
 .contact {
 	margin: 0 10em;
 }
 
+@media only screen and (max-width: 600px) {
+	.contact {
+		margin: auto;
+	}
+}
+
 .contact {
-	padding: 2em;
 }
 
 #contact {
