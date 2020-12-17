@@ -9,3 +9,9 @@
 	margin: 0.5rem;
 	width: 10rem;
 }
+
+@media only screen and (max-width: 600px) {
+	.detail {
+		margin-bottom: 5em;
+	}
+}
