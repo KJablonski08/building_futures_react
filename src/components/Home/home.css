@@ -44,13 +44,20 @@ span {
 }
 
 #about {
-	margin: 0;
 	border-radius: 0;
-	display: grid;
 	background-color: #f2e9e4;
 }
 
+.about {
+	margin: 1em 10em;
+}
+
 #quote {
+	display: grid;
+	justify-content: center;
+}
+
+#about-btn {
 	display: grid;
 	justify-content: center;
 }
