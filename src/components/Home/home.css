@@ -52,6 +52,13 @@ span {
 	margin: 0 10em;
 }
 
+@media only screen and (max-width: 600px) {
+	.about,
+	.contact {
+		margin: 0;
+	}
+}
+
 #quote {
 	display: grid;
 	justify-content: center;
