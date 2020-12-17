@@ -41,7 +41,7 @@ const Blog = ({ loggedIn }) => {
 									<Card.Text id='date'>
 										{moment(post.timestamp).format('LLL')}
 									</Card.Text>
-									<Card.Text>{post.body.substring(0, 100)}...</Card.Text>
+									<Card.Text>{post.body.substring(0, 150)}...</Card.Text>
 									<Link to={`/posts/${post.id}`}>
 										<Button variant='primary'>Read More →</Button>
 									</Link>

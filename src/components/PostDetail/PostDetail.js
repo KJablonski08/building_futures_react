@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Modal, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PostForm from '../PostForm/PostForm';
 import axios from 'axios';
+import moment from 'moment';
 import './postdetail.css';
 
 const PostDetail = ({ match, userData, token }) => {
@@ -44,33 +45,36 @@ const PostDetail = ({ match, userData, token }) => {
 					</div>
 				</Modal>
 			)}
-			<header>
-				<img
-					src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Welcome_files/DSC_0244.jpg'
-					alt='post'
-					className='post-photo'
+			<Card style={{ width: '80%' }} id='post-card'>
+				<Card.Img
+					variant='top'
+					src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Trip_Photos/Pages/February,_2006_files/Media/DSC_0004/DSC_0004.jpg?disposition=download'
 				/>
-				<br />
-				<br />
-				<h2>{post.title}</h2>
-				<h6>{post.timestamp}</h6>
-			</header>
-			<main>
-				<p>{post.body}</p>
+				<Card.Body>
+					<Card.Title>{post.title}</Card.Title>
+					<Card.Text>{post.body}</Card.Text>
+				</Card.Body>
 				{post.author === userData.user_id && (
-					<Button variant='outline-danger' onClick={handleDelete}>
+					<Button
+						variant='outline-danger'
+						onClick={handleDelete}
+						className='author-only'>
 						Delete
 					</Button>
 				)}
 				{post.author === userData.user_id && (
-					<Button variant='outline-warning' onClick={handleShow}>
+					<Button
+						variant='outline-warning'
+						onClick={handleShow}
+						className='author-only'>
 						Edit
 					</Button>
 				)}
-			</main>
-			<Link to='/posts'>
-				<Button>Back to blog Homepage</Button>
-			</Link>
+				<Link to='/posts' className='text-center'>
+					<Button>Back to blog Homepage</Button>
+				</Link>
+				<br />
+			</Card>
 		</div>
 	);
 };
