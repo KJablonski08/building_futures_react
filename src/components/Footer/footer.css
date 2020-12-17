@@ -1,6 +1,25 @@
+.footer {
+	margin: -2em 0;
+}
+
+#navbar {
+	padding: 2em;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+#login {
+	grid-column-start: 2;
+	justify-self: center;
+}
+
+#follow-p {
+	text-decoration: underline;
+}
+
 .follow {
 	color: white;
-	margin: 1em 10em;
+	justify-self: center;
 }
 
 .socials {

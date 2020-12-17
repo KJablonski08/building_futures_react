@@ -9,8 +9,8 @@ const Footer = ({ token, setToken }) => {
 	};
 	return (
 		<div className='footer'>
-			<Navbar bg='dark' variant='dark'>
-				<Nav className='mr-auto follow'>
+			<Navbar bg='dark' variant='dark' id='navbar'>
+				<Nav className='mr-auto' id='login'>
 					<Nav.Link>
 						<Link to='/login' className='social-links'>
 							Login
@@ -18,8 +18,8 @@ const Footer = ({ token, setToken }) => {
 					</Nav.Link>
 				</Nav>
 				<div className='follow'>
-					<p>Follow Us</p>
 					<ul className='socials'>
+						<p id='follow-p'>Follow Us</p>
 						<li>
 							<a
 								href='https://www.facebook.com/Building-Futures-Inc-205596549460078'

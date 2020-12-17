@@ -49,8 +49,10 @@ const Home = () => {
 				</div>
 			</Jumbotron>
 			<Jumbotron id='contact'>
-				<h2 id='contact'>Lets build something great together...</h2>
-				<h4>Building Futures, Inc., PO Box 25171, Rochester, NY 14625</h4>
+				<div className='contact'>
+					<h2 id='contact'>Lets build something great together...</h2>
+					<h4>Building Futures, Inc., PO Box 25171, Rochester, NY 14625</h4>
+				</div>
 			</Jumbotron>
 		</div>
 	);
