@@ -23,14 +23,16 @@ const Footer = ({ token, setToken }) => {
 						<li>
 							<a
 								href='https://www.facebook.com/Building-Futures-Inc-205596549460078'
-								className='social-links'>
+								className='social-links'
+								target='_blank'>
 								Facebook
 							</a>
 						</li>
 						<li>
 							<a
 								href='https://www.instagram.com/isaackasura/'
-								className='social-links'>
+								className='social-links'
+								target='_blank'>
 								Instagram
 							</a>
 						</li>
