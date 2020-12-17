@@ -15,31 +15,21 @@ const About = () => {
 						<h5>-Margaret Mead</h5>
 					</div>
 					<hr />
-					<div>
-						<h3>About Us</h3>
-						<p>
-							Jim Nowak and Adam Jablonski first crossed paths in December of
-							2005. Two months later, they began walking the same path in Kenya,
-							and they never separated. It was here that seeds for what would
-							become Building Futures, Inc was formed. They were working with
-							another organization when the idea came to them. It was a
-							different way of approaching these marvelous people and helping
-							them to achieve their goals. Two years later, Building Futures,
-							Inc. became a reality. Our service work is incredibly rewarding.
-							Every smile on a child’s face, every tear of joy on a parent’s
-							cheek, and every gentle touch from the elderly keep us coming
-							back. They are constant reminders that we are doing the right
-							thing for the right reason.
-						</p>
-					</div>
-					<div>
-						<img
-							src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./About_Us_files/DSC_0047.jpg'
-							alt=''
-						/>
-					</div>
+					<div className='about-us'></div>
 					<hr />
-					<h3>Who we are </h3>
+					<p>
+						Jim Nowak and Adam Jablonski first crossed paths in December of
+						2005. Two months later, they began walking the same path in Kenya,
+						and they never separated. It was here that seeds for what would
+						become Building Futures, Inc was formed. They were working with
+						another organization when the idea came to them. It was a different
+						way of approaching these marvelous people and helping them to
+						achieve their goals. Two years later, Building Futures, Inc. became
+						a reality. Our service work is incredibly rewarding. Every smile on
+						a child’s face, every tear of joy on a parent’s cheek, and every
+						gentle touch from the elderly keep us coming back. They are constant
+						reminders that we are doing the right thing for the right reason.
+					</p>
 					<br />
 					<div className='who-we-are'>
 						<Accordion id='accordion'>

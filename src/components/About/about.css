@@ -7,6 +7,14 @@ h5 {
 	justify-content: end;
 }
 
+.about-us {
+	background-image: url('http://www.buildingfuturesinc.com/Building_Futures,_Inc./About_Us_files/DSC_0047.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 50vh;
+}
+
 .who-we-are {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
