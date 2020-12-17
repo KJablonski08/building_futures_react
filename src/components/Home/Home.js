@@ -28,11 +28,13 @@ const Home = () => {
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<p id='play'>
-					<Button variant='primary' onClick={handleShow} id='play-btn'>
-						Play
-					</Button>
-				</p>
+				<Button
+					variant='primary'
+					onClick={handleShow}
+					class='text-center'
+					id='play-btn'>
+					Play ▶
+				</Button>
 			</Jumbotron>
 			<Jumbotron id='about'>
 				<h4 id='quote'>

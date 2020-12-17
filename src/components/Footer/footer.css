@@ -1,10 +1,13 @@
-.social-links {
+.follow {
 	color: white;
 	margin: 1em 10em;
 }
 
 .socials {
 	list-style-type: none;
+}
+
+.social-links {
 	color: white;
 	text-decoration: none;
 }
