@@ -58,3 +58,8 @@ span {
 	display: grid;
 	justify-content: end;
 }
+
+#contact {
+	margin: 0;
+	border-radius: 0;
+}

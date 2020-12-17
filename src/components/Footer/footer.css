@@ -1,2 +1,10 @@
-.footer {
+.social-links {
+	color: white;
+	margin: 1em 10em;
+}
+
+.socials {
+	list-style-type: none;
+	color: white;
+	text-decoration: none;
 }

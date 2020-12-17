@@ -44,6 +44,10 @@ const Home = () => {
 					<Button variant='outline-dark'>About Us</Button>
 				</Link>
 			</Jumbotron>
+			<Jumbotron id='contact'>
+				<h2 id='contact'>Lets build something great together...</h2>
+				<h4>Building Futures, Inc., PO Box 25171, Rochester, NY 14625</h4>
+			</Jumbotron>
 		</div>
 	);
 };

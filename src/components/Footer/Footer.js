@@ -10,23 +10,28 @@ const Footer = ({ token, setToken }) => {
 	return (
 		<div className='footer'>
 			<Navbar bg='dark' variant='dark'>
-				<Nav className='mr-auto'>
+				<Nav className='mr-auto social-links'>
 					<Nav.Link>
 						<Link to='/login'>Login</Link>
 					</Nav.Link>
-					<Nav.Link>Contact</Nav.Link>
 				</Nav>
-				<p>Follow Us</p>
-				<Nav.Link href='https://www.facebook.com/Building-Futures-Inc-205596549460078'>
-					Facebook
-				</Nav.Link>
-				<Nav.Link href='https://www.instagram.com/isaackasura/'>
-					Instagram
-				</Nav.Link>
-				<Form inline>
+				<div className='social-links'>
+					<p>Follow Us</p>
+					<ul className='socials'>
+						<li>
+							<a href='https://www.facebook.com/Building-Futures-Inc-205596549460078'>
+								Facebook
+							</a>
+						</li>
+						<li>
+							<a href='https://www.instagram.com/isaackasura/'>Instagram</a>
+						</li>
+					</ul>
+				</div>
+				{/* <Form inline>
 					<FormControl type='text' placeholder='Search' className='mr-sm-2' />
 					<Button variant='outline-info'>Search</Button>
-				</Form>
+				</Form> */}
 			</Navbar>
 		</div>
 	);
