@@ -11,6 +11,13 @@
 	grid-template-rows: 1fr 1fr 1fr;
 }
 
+@media only screen and (max-width: 600px) {
+	#build {
+		height: auto;
+		width: auto;
+	}
+}
+
 #play-btn {
 	border-radius: 50%;
 	padding: 1.5em 1em;
