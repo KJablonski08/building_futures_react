@@ -26,7 +26,6 @@ function App() {
 			setLoggedIn(true);
 		}
 	}, [token]);
-	console.log(loggedIn);
 	return (
 		<div className='App'>
 			<header>

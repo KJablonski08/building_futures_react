@@ -37,7 +37,6 @@ const PostForm = ({ token, userData, editPost }) => {
 			},
 		});
 	};
-	console.log(token);
 	return (
 		<div className='form'>
 			<h2>Add A New Post</h2>

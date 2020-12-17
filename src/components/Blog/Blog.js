@@ -15,7 +15,6 @@ const Blog = ({ loggedIn }) => {
 			})
 			.catch(console.error);
 	}, []);
-	console.log(posts);
 	return (
 		<div>
 			<Jumbotron id='heading'>

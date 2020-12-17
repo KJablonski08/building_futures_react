@@ -17,7 +17,6 @@ const Login = ({ setToken, setUserData }) => {
 			data: user,
 		})
 			.then((res) => {
-				console.log(res.data);
 				setToken(res.data.token);
 				setUserData({
 					user_id: res.data.user_id,
