@@ -17,8 +17,12 @@ const Footer = ({ token, setToken }) => {
 					<Nav.Link>Contact</Nav.Link>
 				</Nav>
 				<p>Follow Us</p>
-				<Nav.Link href='#home'>Facebook</Nav.Link>
-				<Nav.Link href='#pricing'>Instagram</Nav.Link>
+				<Nav.Link href='https://www.facebook.com/Building-Futures-Inc-205596549460078'>
+					Facebook
+				</Nav.Link>
+				<Nav.Link href='https://www.instagram.com/isaackasura/'>
+					Instagram
+				</Nav.Link>
 				<Form inline>
 					<FormControl type='text' placeholder='Search' className='mr-sm-2' />
 					<Button variant='outline-info'>Search</Button>
