@@ -3,7 +3,6 @@ import { Button, Modal, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PostForm from '../PostForm/PostForm';
 import axios from 'axios';
-import moment from 'moment';
 import './postdetail.css';
 
 const PostDetail = ({ match, userData, token }) => {
