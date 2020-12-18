@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import ReactHtmlParser from 'react-html-parser';
 import axios from 'axios';
 import moment from 'moment';
 import './blog.css';
@@ -40,7 +41,9 @@ const Blog = ({ loggedIn }) => {
 									<Card.Text id='date'>
 										{moment(post.timestamp).format('LLL')}
 									</Card.Text>
-									<Card.Text>{post.body.substring(0, 150)}...</Card.Text>
+									<Card.Text>
+										{ReactHtmlParser(post.body.substring(0, 150))}...
+									</Card.Text>
 									<Link to={`/posts/${post.id}`}>
 										<Button variant='primary'>Read More →</Button>
 									</Link>

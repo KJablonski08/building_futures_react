@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Button, Modal, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import PostForm from '../PostForm/PostForm';
+import ReactHtmlParser from 'react-html-parser';
 import axios from 'axios';
 import moment from 'moment';
 import './postdetail.css';
@@ -43,6 +44,7 @@ const PostDetail = ({ match, userData, token }) => {
 						<h2>Edit this Post:</h2>
 						<PostForm token={token} userData={userData} editPost={post} />
 					</div>
+					<Button onClick={handleClose}>Close</Button>
 				</Modal>
 			)}
 			<Card>
@@ -52,7 +54,7 @@ const PostDetail = ({ match, userData, token }) => {
 				/>
 				<Card.Body>
 					<Card.Title>{post.title}</Card.Title>
-					<Card.Text>{post.body}</Card.Text>
+					<Card.Text>{ReactHtmlParser(post.body)}</Card.Text>
 				</Card.Body>
 				{post.author === userData.user_id && (
 					<Button
