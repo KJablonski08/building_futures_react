@@ -6,14 +6,25 @@
 	height: 100vh;
 	margin: 0;
 	border-radius: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 }
 
-#play {
+@media only screen and (max-width: 600px) {
+	#build {
+		height: auto;
+		width: auto;
+	}
 }
 
 #play-btn {
 	border-radius: 50%;
-	padding: 2em;
+	padding: 1.5em 1em;
+	grid-column-start: 2;
+	grid-row-start: 3;
+	justify-self: center;
+	align-self: center;
 }
 
 span {
@@ -40,10 +51,18 @@ span {
 }
 
 #about {
-	margin: 0;
 	border-radius: 0;
-	display: grid;
 	background-color: #f2e9e4;
+}
+
+.about {
+	margin: 0 10em;
+}
+
+@media only screen and (max-width: 600px) {
+	.about {
+		margin: auto;
+	}
 }
 
 #quote {
@@ -51,7 +70,35 @@ span {
 	justify-content: center;
 }
 
+#about-btn {
+	display: grid;
+	justify-content: center;
+}
+
 #quote_citation {
 	display: grid;
 	justify-content: end;
+}
+
+@media only screen and (max-width: 600px) {
+	#quote_citation {
+		margin: 0;
+	}
+}
+
+.contact {
+	margin: 0 10em;
+}
+
+@media only screen and (max-width: 600px) {
+	.contact {
+		margin: auto;
+	}
+}
+
+.contact {
+}
+
+#contact {
+	border-radius: 0;
 }

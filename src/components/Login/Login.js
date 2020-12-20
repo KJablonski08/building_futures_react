@@ -13,11 +13,10 @@ const Login = ({ setToken, setUserData }) => {
 		event.preventDefault();
 		axios({
 			method: 'POST',
-			url: 'http://localhost:8000/api-token-auth/',
+			url: 'https://building-futures-django.herokuapp.com/api-token-auth/',
 			data: user,
 		})
 			.then((res) => {
-				console.log(res.data);
 				setToken(res.data.token);
 				setUserData({
 					user_id: res.data.user_id,
