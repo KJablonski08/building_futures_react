@@ -5,3 +5,8 @@
 #nav {
 	background-color: white;
 }
+
+#center {
+	display: grid;
+	justify-content: center;
+}

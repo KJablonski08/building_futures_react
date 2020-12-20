@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+## Building Futures
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Building Futures is a blogging application that was created for Building Futures Inc. Building Futures, Inc., is an IRS authorized 501(c)3. Their mission is to aid in the education and welfare of impoverished Kenyans. The building futures blog is a place for supporters to get up to date information on the latest projects and updates from directors through blog posts. Dirctors are able to log in and create new posts. Anyone who does not have a director login has read only access to all blog posts.
+
+![](bf_homepage.gif)
 
 ## Available Scripts
 
