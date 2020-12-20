@@ -4,6 +4,10 @@ Building Futures is a blogging application that was created for Building Futures
 
 ![](bf_homepage.gif)
 
+### Motivation
+
+### Build Status
+
 ### Technologies Used
 
 Frontend: HTML, CSS, JavaScript, React.js, React-Bootstrap
