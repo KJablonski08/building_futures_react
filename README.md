@@ -4,17 +4,24 @@ Building Futures is a blogging application that was created for Building Futures
 
 ![](bf_homepage.gif)
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+Frontend: HTML, CSS, JavaScript, React.js, React-Bootstrap
+Backend: Django, Python
 
-### `yarn start`
+Frontend and Backend deployed with Heroku
 
-Runs the app in the development mode.\
+### Getting Started/Installation Instructions
+
+Link to Frontend deployed app on Heroku: https://building-futures-inc.herokuapp.com/
+Link to Backend deployed app on Heroku: https://building-futures-django.herokuapp.com/
+
+OR
+
+Clone this project from GitHub.
+Open in your preferred text editor and start your live server to run on your local machine -
+Run the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
 ### `yarn test`
 
