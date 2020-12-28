@@ -48,6 +48,7 @@ const Home = () => {
 									citizens can change the world. Indeed, it is the only thing
 									that ever has
 								</p>
+								<p>-Margaret Mead</p>
 								<Link to='/about' id='about-btn'>
 									<Button variant='outline-light'>About Us</Button>
 								</Link>
