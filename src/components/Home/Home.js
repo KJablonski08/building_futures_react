@@ -37,14 +37,6 @@ const Home = () => {
 				</Button>
 			</Jumbotron>
 			<Jumbotron id='about'>
-				<h4 id='quote'>
-					Never doubt that a small group of thoughtful committed citizens can
-					change the world. Indeed, it is the only thing that ever has
-				</h4>
-				<p id='quote_citation'>-Margaret Mead</p>
-				<Link to='about'>
-					<Button variant='outline-dark'>About Us</Button>
-				</Link>
 				<div className='about'>
 					<h4 id='quote'>
 						Never doubt that a small group of thoughtful committed citizens can
