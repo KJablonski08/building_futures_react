@@ -44,12 +44,12 @@ span {
 }
 
 #walk-with-me {
-	background-color: #1f1a24;
+	background-color: #4f5d75;
 	color: white;
 }
 
 #video-container {
-	background-color: #1f1a24;
+	background-color: #4f5d75;
 }
 
 #about {
@@ -71,6 +71,7 @@ span {
 }
 
 /* QUOTE BOX  */
+/* Inspiration from https://codepen.io/abdelRhman345/pen/oJOPdq */
 
 .about {
 	-webkit-box-sizing: border-box;

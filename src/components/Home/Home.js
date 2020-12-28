@@ -14,20 +14,16 @@ const Home = () => {
 		<div>
 			<Jumbotron id='build'>
 				<Modal show={show} onHide={handleClose} id='modal'>
-					<Modal.Header id='walk-with-me'>
-						<Modal.Title>When I Walk</Modal.Title>
-					</Modal.Header>
 					<Modal.Body id='video-container'>
+						<h2 id='walk-with-me'>When I Walk</h2>
 						<video
 							width='100%'
 							controls
 							src={process.env.PUBLIC_URL + '/media/when_i_walk.mp4'}></video>
-					</Modal.Body>
-					<Modal.Footer id='walk-with-me'>
-						<Button id='play-btn' onClick={handleClose}>
+						<Button onClick={handleClose} className='ml-auto'>
 							Close
 						</Button>
-					</Modal.Footer>
+					</Modal.Body>
 				</Modal>
 				<button onClick={handleShow} class='text-center' id='play-btn'>
 					<BiPlayCircle />
