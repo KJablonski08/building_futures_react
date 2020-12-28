@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Jumbotron, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BiPlayCircle } from 'react-icons/bi';
 import './home.css';
 
 const Home = () => {
@@ -28,9 +29,10 @@ const Home = () => {
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<Button onClick={handleShow} class='text-center' id='play-btn'>
-					Play ▶
-				</Button>
+				<button onClick={handleShow} class='text-center' id='play-btn'>
+					<BiPlayCircle />
+				</button>
+				Watch Our Video
 			</Jumbotron>
 			<Jumbotron id='about'>
 				<div className='about'>

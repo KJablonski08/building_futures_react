@@ -19,14 +19,14 @@
 }
 
 #play-btn {
-	border-radius: 50%;
-	padding: 2em 1.5em;
 	grid-column-start: 2;
 	grid-row-start: 3;
 	justify-self: center;
 	align-self: center;
-	background-color: #4f5d75;
+	background-color: transparent;
+	color: white;
 	border: none;
+	font-size: 7rem;
 }
 
 span {
