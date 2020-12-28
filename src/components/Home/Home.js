@@ -38,10 +38,6 @@ const Home = () => {
 			</Jumbotron>
 			<Jumbotron id='about'>
 				<div className='about'>
-					<h4 id='quote'>
-						Never doubt that a small group of thoughtful committed citizens can
-						change the world. Indeed, it is the only thing that ever has
-					</h4>
 					<div class='box'>
 						<i class='fas fa-quote-left fa2'></i>
 						<div class='text'>

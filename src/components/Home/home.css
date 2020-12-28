@@ -53,10 +53,8 @@ span {
 #about {
 	border-radius: 0;
 	background-color: #ef8354;
-}
-
-.about {
-	margin: 0 10em;
+	display: grid;
+	justify-content: center;
 }
 
 @media only screen and (max-width: 600px) {
@@ -65,25 +63,9 @@ span {
 	}
 }
 
-#quote {
-	display: grid;
-	justify-content: center;
-}
-
 #about-btn {
 	display: grid;
 	justify-content: center;
-}
-
-#quote_citation {
-	display: grid;
-	justify-content: end;
-}
-
-@media only screen and (max-width: 600px) {
-	#quote_citation {
-		margin: 0;
-	}
 }
 
 .contact {
@@ -104,16 +86,32 @@ span {
 
 /* QUOTE BOX  */
 
+.about {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	height: auto;
+}
+.about {
+	background-color: #b71540;
+	font-family: 'Montserrat', sans-serif;
+}
 .box {
 	background-color: transparent;
 	border-radius: 3px;
 	color: #fff;
-	transform: translate(-50%, -50%);
+	/* position: absolute; */
+	/* top: 75%; */
+	/* left: 50%; */
+	/* transform: translate(-50%, -50%); */
 	width: 400px;
 	height: 300px;
 	transform-style: preserve-3d;
 	perspective: 2000px;
 	transition: 0.4s;
+	text-align: center;
 }
 .box:before {
 	content: '';
@@ -186,7 +184,7 @@ span {
 	font-size: 15px;
 }
 .box:hover {
-	transform: translate(-50%, -50%) rotateY(-20deg) skewY(3deg);
+	transform: rotateY(-20deg) skewY(3deg);
 }
 .box:hover .text {
 	transform: rotateY(20deg) skewY(-3deg);
