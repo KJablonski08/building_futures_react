@@ -32,7 +32,7 @@ const Home = () => {
 				<button onClick={handleShow} class='text-center' id='play-btn'>
 					<BiPlayCircle />
 				</button>
-				Watch Our Video
+				<h3 id='play-btn'>Watch Our Video</h3>
 			</Jumbotron>
 			<Jumbotron id='about'>
 				<div className='about'>
