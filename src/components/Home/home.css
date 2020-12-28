@@ -94,18 +94,11 @@ span {
 	margin: 0;
 	height: auto;
 }
-.about {
-	background-color: #b71540;
-	font-family: 'Montserrat', sans-serif;
-}
+
 .box {
 	background-color: transparent;
 	border-radius: 3px;
 	color: #fff;
-	/* position: absolute; */
-	/* top: 75%; */
-	/* left: 50%; */
-	/* transform: translate(-50%, -50%); */
 	width: 400px;
 	height: 300px;
 	transform-style: preserve-3d;
