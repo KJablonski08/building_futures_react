@@ -42,10 +42,22 @@ const Home = () => {
 						Never doubt that a small group of thoughtful committed citizens can
 						change the world. Indeed, it is the only thing that ever has
 					</h4>
-					<p id='quote_citation'>-Margaret Mead</p>
-					<Link to='/about' id='about-btn'>
-						<Button variant='outline-dark'>About Us</Button>
-					</Link>
+					<div class='box'>
+						<i class='fas fa-quote-left fa2'></i>
+						<div class='text'>
+							<i class='fas fa-quote-right fa1'></i>
+							<div>
+								<p>
+									Never doubt that a small group of thoughtful committed
+									citizens can change the world. Indeed, it is the only thing
+									that ever has
+								</p>
+								<Link to='/about' id='about-btn'>
+									<Button variant='outline-light'>About Us</Button>
+								</Link>
+							</div>
+						</div>
+					</div>
 				</div>
 			</Jumbotron>
 			<Jumbotron id='contact'>
