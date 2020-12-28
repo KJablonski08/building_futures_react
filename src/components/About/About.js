@@ -31,6 +31,8 @@ const About = () => {
 						reminders that we are doing the right thing for the right reason.
 					</p>
 					<br />
+					<h2>Directors</h2>
+					<p>Click photo for bio</p>
 					<div className='who-we-are'>
 						<Accordion id='accordion'>
 							<Card id='accordion-card'>
@@ -43,7 +45,7 @@ const About = () => {
 												id='director-img'></img>
 											<br />
 											<br />
-											<h2>Director: Adam Jablonski</h2>
+											<h2>Adam Jablonski</h2>
 										</div>
 									</div>
 								</Accordion.Toggle>
@@ -84,7 +86,7 @@ const About = () => {
 												id='director-img'></img>
 											<br />
 											<br />
-											<h2>Director: Steve Erickson</h2>
+											<h2>Steve Erickson</h2>
 										</div>
 									</div>
 								</Accordion.Toggle>
@@ -125,7 +127,7 @@ const About = () => {
 												id='director-img'></img>
 											<br />
 											<br />
-											<h2>Director: Tim Slisz</h2>
+											<h2>Tim Slisz</h2>
 										</div>
 									</div>
 								</Accordion.Toggle>
@@ -171,7 +173,7 @@ const About = () => {
 												id='director-img'></img>
 											<br />
 											<br />
-											<h2>Director: Isaac Parsaloi Kasura</h2>
+											<h2>Isaac Parsaloi Kasura</h2>
 										</div>
 									</div>
 								</Accordion.Toggle>

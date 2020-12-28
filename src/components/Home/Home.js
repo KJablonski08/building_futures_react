@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Jumbotron, Modal } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { BiPlayCircle } from 'react-icons/bi';
 import './home.css';
 
 const Home = () => {
@@ -23,37 +24,35 @@ const Home = () => {
 							src={process.env.PUBLIC_URL + '/media/when_i_walk.mp4'}></video>
 					</Modal.Body>
 					<Modal.Footer id='walk-with-me'>
-						<Button variant='secondary' onClick={handleClose}>
+						<Button id='play-btn' onClick={handleClose}>
 							Close
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<Button
-					variant='primary'
-					onClick={handleShow}
-					class='text-center'
-					id='play-btn'>
-					Play ▶
-				</Button>
+				<button onClick={handleShow} class='text-center' id='play-btn'>
+					<BiPlayCircle />
+				</button>
+				<h3 id='play-btn'>Watch Our Video</h3>
 			</Jumbotron>
 			<Jumbotron id='about'>
-				<h4 id='quote'>
-					Never doubt that a small group of thoughtful committed citizens can
-					change the world. Indeed, it is the only thing that ever has
-				</h4>
-				<p id='quote_citation'>-Margaret Mead</p>
-				<Link to='about'>
-					<Button variant='outline-dark'>About Us</Button>
-				</Link>
 				<div className='about'>
-					<h4 id='quote'>
-						Never doubt that a small group of thoughtful committed citizens can
-						change the world. Indeed, it is the only thing that ever has
-					</h4>
-					<p id='quote_citation'>-Margaret Mead</p>
-					<Link to='/about' id='about-btn'>
-						<Button variant='outline-dark'>About Us</Button>
-					</Link>
+					<div class='box'>
+						<i class='fas fa-quote-left fa2'></i>
+						<div class='text'>
+							<i class='fas fa-quote-right fa1'></i>
+							<div>
+								<p>
+									Never doubt that a small group of thoughtful committed
+									citizens can change the world. Indeed, it is the only thing
+									that ever has
+								</p>
+								<p>-Margaret Mead</p>
+								<Link to='/about' id='about-btn'>
+									<Button variant='outline-light'>About Us</Button>
+								</Link>
+							</div>
+						</div>
+					</div>
 				</div>
 			</Jumbotron>
 			<Jumbotron id='contact'>
