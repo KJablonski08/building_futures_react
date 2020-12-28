@@ -20,11 +20,13 @@
 
 #play-btn {
 	border-radius: 50%;
-	padding: 1.5em 1em;
+	padding: 2em 1.5em;
 	grid-column-start: 2;
 	grid-row-start: 3;
 	justify-self: center;
 	align-self: center;
+	background-color: #4f5d75;
+	border: none;
 }
 
 span {
@@ -66,22 +68,6 @@ span {
 #about-btn {
 	display: grid;
 	justify-content: center;
-}
-
-.contact {
-	margin: 0 10em;
-}
-
-@media only screen and (max-width: 600px) {
-	.contact {
-		margin: auto;
-	}
-}
-
-#contact {
-	border-radius: 0;
-	background-color: #4f5d75;
-	color: white;
 }
 
 /* QUOTE BOX  */
@@ -181,4 +167,20 @@ span {
 }
 .box:hover .text {
 	transform: rotateY(20deg) skewY(-3deg);
+}
+
+.contact {
+	margin: 0 10em;
+}
+
+@media only screen and (max-width: 600px) {
+	.contact {
+		margin: auto;
+	}
+}
+
+#contact {
+	border-radius: 0;
+	background-color: #4f5d75;
+	color: white;
 }

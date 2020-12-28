@@ -23,16 +23,12 @@ const Home = () => {
 							src={process.env.PUBLIC_URL + '/media/when_i_walk.mp4'}></video>
 					</Modal.Body>
 					<Modal.Footer id='walk-with-me'>
-						<Button variant='secondary' onClick={handleClose}>
+						<Button id='play-btn' onClick={handleClose}>
 							Close
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<Button
-					variant='primary'
-					onClick={handleShow}
-					class='text-center'
-					id='play-btn'>
+				<Button onClick={handleShow} class='text-center' id='play-btn'>
 					Play ▶
 				</Button>
 			</Jumbotron>
