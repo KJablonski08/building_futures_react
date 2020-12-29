@@ -24,7 +24,8 @@ const Footer = ({ token, setToken }) => {
 							<a
 								href='https://www.facebook.com/Building-Futures-Inc-205596549460078'
 								className='social-links'
-								target='_blank'>
+								target='_blank'
+								rel='noreferrer'>
 								Facebook
 							</a>
 						</li>
@@ -32,7 +33,8 @@ const Footer = ({ token, setToken }) => {
 							<a
 								href='https://www.instagram.com/isaackasura/'
 								className='social-links'
-								target='_blank'>
+								target='_blank'
+								rel='noreferrer'>
 								Instagram
 							</a>
 						</li>
