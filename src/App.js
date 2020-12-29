@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Navigation from './components/Nav/Nav';
 import Home from './components/Home/Home';
 import About from './components/About/About';
+import Gallery from './components/Gallery/Gallery';
 import Blog from './components/Blog/Blog';
 import PostDetail from './components/PostDetail/PostDetail';
 import PostForm from './components/PostForm/PostForm';
@@ -35,6 +36,7 @@ function App() {
 				<Switch>
 					<Route exact path='/' component={Home} />
 					<Route path='/about' component={About} />
+					<Route path='/gallery' component={Gallery} />
 					<Route
 						exact
 						path='/posts'
