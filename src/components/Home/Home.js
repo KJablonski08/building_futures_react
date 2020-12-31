@@ -25,10 +25,12 @@ const Home = () => {
 						</Button>
 					</Modal.Body>
 				</Modal>
-				<button onClick={handleShow} class='text-center' id='play-btn'>
-					<BiPlayCircle />
-				</button>
-				<h3 id='play-btn'>Watch Our Video</h3>
+				<div className='ctrbtm'>
+					<button onClick={handleShow} className='text-center' id='play-btn'>
+						<BiPlayCircle />
+					</button>
+					<h4>Watch Our Video</h4>
+				</div>
 			</Jumbotron>
 			<Jumbotron id='about'>
 				<div className='about'>
