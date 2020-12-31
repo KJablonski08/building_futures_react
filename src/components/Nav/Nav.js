@@ -29,6 +29,11 @@ const Navigation = () => {
 								Blog
 							</Link>
 						</Nav>
+						<Nav>
+							<Link to='/gallery' className='nav-link'>
+								Gallery
+							</Link>
+						</Nav>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
