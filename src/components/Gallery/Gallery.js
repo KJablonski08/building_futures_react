@@ -20,6 +20,15 @@ const PhotoGallery = () => {
 
 	return (
 		<div className='gallery'>
+			<h2>Photo Gallery</h2>
+			<p>
+				Hundreds of photographs are taken during each trip to Kenya, so you can
+				imagine how difficult it is to reduce that number. These pictures speak
+				louder than the words used to describe them, but if you would like to
+				see the stories that go on around them, please visit our blog. There you
+				will find much more detailed information about the region, the people
+				and the relationships that are have been formed over the years.
+			</p>
 			<Gallery photos={photos} onClick={openLightbox} />
 			<ModalGateway>
 				{viewerIsOpen ? (
