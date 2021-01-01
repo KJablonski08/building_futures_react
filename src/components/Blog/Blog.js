@@ -3,11 +3,7 @@ import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
-import ReactHtmlParser, {
-	processNodes,
-	convertNodeToElement,
-	htmlparser2,
-} from 'react-html-parser';
+import ReactHtmlParser from 'react-html-parser';
 import './blog.css';
 
 const Blog = ({ loggedIn }) => {
