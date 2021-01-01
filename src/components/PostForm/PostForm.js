@@ -7,6 +7,13 @@ import axios from 'axios';
 const PostForm = ({ token, userData, editPost }) => {
 	let title = editPost ? editPost.title : '';
 	let body = editPost ? editPost.body : '';
+	const [editorValue, setEditorValue] = useState('');
+	const handleOnChange = (e, editor) => {
+		const data = editor.getData();
+		setEditorValue(data);
+		setPost({ ...post, body: editorValue });
+	};
+
 	const [post, setPost] = useState({
 		author: userData.user_id,
 		title: title,
@@ -15,10 +22,6 @@ const PostForm = ({ token, userData, editPost }) => {
 	const handleChange = (event) => {
 		event.preventDefault();
 		setPost({ ...post, [event.target.name]: event.target.value });
-	};
-	const handleEditorChange = (event, editor) => {
-		const data = editor.getData();
-		console.log({ ...post, body: data });
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -59,20 +62,27 @@ const PostForm = ({ token, userData, editPost }) => {
 					/>
 					<Form.Group>
 						<Form.Label htmlFor='body'>Body</Form.Label>
-						<CKEditor
-							editor={ClassicEditor}
-							data={post.body}
-							onChange={handleEditorChange}
+						<Form.Control
+							className='textinput'
+							as='textarea'
+							rows={3}
 							name='body'
+							onChange={handleChange}
 							value={post.body}
+							placeholder='Create your post here ...'
 						/>
+						<div>
+							<CKEditor editor={ClassicEditor} onChange={handleOnChange} />
+						</div>
 					</Form.Group>
 				</Form.Group>
-
 				<Button className='buttons' variant='primary' type='submit'>
 					Submit
 				</Button>
 			</Form>
+			<br />
+			<br />
+			<br />
 		</div>
 	);
 };
