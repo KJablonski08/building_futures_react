@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import axios from 'axios';
 
 const PostForm = ({ token, userData, editPost }) => {
@@ -13,6 +15,10 @@ const PostForm = ({ token, userData, editPost }) => {
 	const handleChange = (event) => {
 		event.preventDefault();
 		setPost({ ...post, [event.target.name]: event.target.value });
+	};
+	const handleEditorChange = (event, editor) => {
+		const data = editor.getData();
+		console.log({ ...post, body: data });
 	};
 	const handleSubmit = (event) => {
 		event.preventDefault();
@@ -53,14 +59,12 @@ const PostForm = ({ token, userData, editPost }) => {
 					/>
 					<Form.Group>
 						<Form.Label htmlFor='body'>Body</Form.Label>
-						<Form.Control
-							className='textinput'
-							as='textarea'
-							rows={3}
+						<CKEditor
+							editor={ClassicEditor}
+							data={post.body}
+							onChange={handleEditorChange}
 							name='body'
-							onChange={handleChange}
 							value={post.body}
-							placeholder='Create your post here ...'
 						/>
 					</Form.Group>
 				</Form.Group>
