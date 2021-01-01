@@ -62,17 +62,12 @@ const PostForm = ({ token, userData, editPost }) => {
 					/>
 					<Form.Group>
 						<Form.Label htmlFor='body'>Body</Form.Label>
-						<Form.Control
-							className='textinput'
-							as='textarea'
-							rows={3}
-							name='body'
-							onChange={handleChange}
-							value={post.body}
-							placeholder='Create your post here ...'
-						/>
 						<div>
-							<CKEditor editor={ClassicEditor} onChange={handleOnChange} />
+							<CKEditor
+								// data='<p>Hello from the first editor working with the context!</p>'
+								editor={ClassicEditor}
+								onChange={handleOnChange}
+							/>
 						</div>
 					</Form.Group>
 				</Form.Group>
