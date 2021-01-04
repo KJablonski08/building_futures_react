@@ -63,11 +63,11 @@ const PostForm = ({ token, userData, editPost }) => {
 					<Form.Group>
 						<Form.Label htmlFor='body'>Body</Form.Label>
 						<div>
-							<CKEditor
+							{/* <CKEditor
 								// data='<p>Hello from the first editor working with the context!</p>'
 								editor={ClassicEditor}
 								onChange={handleOnChange}
-							/>
+							/> */}
 						</div>
 					</Form.Group>
 				</Form.Group>
