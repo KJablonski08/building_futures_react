@@ -3,7 +3,6 @@ import { Card, CardColumns, Button, Jumbotron } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment';
-import ReactHtmlParser from 'react-html-parser';
 import './blog.css';
 
 const Blog = ({ loggedIn }) => {
@@ -30,7 +29,6 @@ const Blog = ({ loggedIn }) => {
 			<div id='post-container'>
 				<CardColumns>
 					{posts.map((post, i) => {
-						const postBody = post.body.substring(0, 150);
 						return (
 							<Card key={i} id='post-card'>
 								<Card.Img
@@ -42,10 +40,7 @@ const Blog = ({ loggedIn }) => {
 									<Card.Text id='date'>
 										{moment(post.timestamp).format('LLL')}
 									</Card.Text>
-									<Card.Text>
-										{ReactHtmlParser(postBody)}
-										...
-									</Card.Text>
+									<Card.Text>{post.body.substring(0, 150)}...</Card.Text>
 									<Link to={`/posts/${post.id}`}>
 										<Button variant='primary'>Read More →</Button>
 									</Link>

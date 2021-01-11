@@ -1,19 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
-import { CKEditor } from '@ckeditor/ckeditor5-react';
-import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import axios from 'axios';
 
 const PostForm = ({ token, userData, editPost }) => {
 	let title = editPost ? editPost.title : '';
 	let body = editPost ? editPost.body : '';
-	const [editorValue, setEditorValue] = useState('');
-	const handleOnChange = (e, editor) => {
-		const data = editor.getData();
-		setEditorValue(data);
-		setPost({ ...post, body: editorValue });
-	};
-
 	const [post, setPost] = useState({
 		author: userData.user_id,
 		title: title,
@@ -62,22 +53,22 @@ const PostForm = ({ token, userData, editPost }) => {
 					/>
 					<Form.Group>
 						<Form.Label htmlFor='body'>Body</Form.Label>
-						<div>
-							{/* <CKEditor
-								// data='<p>Hello from the first editor working with the context!</p>'
-								editor={ClassicEditor}
-								onChange={handleOnChange}
-							/> */}
-						</div>
+						<Form.Control
+							className='textinput'
+							as='textarea'
+							rows={3}
+							name='body'
+							onChange={handleChange}
+							value={post.body}
+							placeholder='Create your post here ...'
+						/>
 					</Form.Group>
 				</Form.Group>
+
 				<Button className='buttons' variant='primary' type='submit'>
 					Submit
 				</Button>
 			</Form>
-			<br />
-			<br />
-			<br />
 		</div>
 	);
 };
