@@ -35,9 +35,9 @@ const Blog = ({ loggedIn }) => {
 								<Card.Img variant='top' src={post.photo} />
 								<Card.Body>
 									<Card.Title>{post.title}</Card.Title>
-									<Card.Text id='date'>
+									{/* <Card.Text id='date'>
 										{moment(post.timestamp).format('LLL')}
-									</Card.Text>
+									</Card.Text> */}
 									<Card.Text>{post.body.substring(0, 150)}...</Card.Text>
 									<Link to={`/posts/${post.id}`}>
 										<Button variant='primary'>Read More →</Button>
