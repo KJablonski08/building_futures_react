@@ -5,10 +5,12 @@ Building Futures is a blogging application that was created for Building Futures
 ![](bf_homepage.gif)
 
 ### Motivation
+
 I was able to help by creating a custom blogging application for supporters to visit and see updates on the work that Building Futures is doing. Building Futures is run by volunteers and commits to spending 100% of the money donated to funding their sustainable development projects in Kenya. They don't have the budget for a website and I was thrilled to have the privilege to provide this for them.
 I cannot wait to see what we add next!
 
 ### Build Status
+
 Deployed on Heroku
 
 ### Technologies Used
@@ -20,7 +22,7 @@ Frontend and Backend deployed with Heroku
 
 ### Getting Started/Installation Instructions
 
-Link to Frontend deployed app on Heroku: https://building-futures-inc.herokuapp.com/
+Link to Frontend deployed app on Heroku: https://buildingfuturesinc.herokuapp.com/
 Link to Backend deployed app on Heroku: https://building-futures-django.herokuapp.com/
 Link to Source Code for Backend Django Application: https://github.com/KJablonski08/building_futures_django
 

@@ -29,12 +29,10 @@ const Blog = ({ loggedIn }) => {
 			<div id='post-container'>
 				<CardColumns>
 					{posts.map((post, i) => {
+						console.log(post);
 						return (
 							<Card key={i} id='post-card'>
-								<Card.Img
-									variant='top'
-									src='http://www.buildingfuturesinc.com/Building_Futures,_Inc./Trip_Photos/Pages/Masai_Mara_files/Media/AEJ_3825/AEJ_3825.jpg?disposition=download'
-								/>
+								<Card.Img variant='top' src={post.photo} />
 								<Card.Body>
 									<Card.Title>{post.title}</Card.Title>
 									<Card.Text id='date'>

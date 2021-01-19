@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 import './footer.css';
 
 const Footer = ({ token, setToken }) => {
-	const logout = () => {
-		setToken = '';
-	};
 	return (
 		<div className='footer'>
 			<Navbar id='navbar'>
